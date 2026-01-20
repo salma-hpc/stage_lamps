@@ -1,3 +1,4 @@
+
 # Implémentation du format CSR pour Matrices de Connectivité
 
 **Stage de Master 1 - Calcul Haute Performance et Simulation**
@@ -9,16 +10,16 @@ Ce projet implémente le format de stockage **CSR (Compressed Sparse Row)** pour
 L'objectif principal est de réduire l'empreinte mémoire et d'accélérer les opérations algébriques par rapport aux matrices denses classiques, grâce notamment à une parallélisation des calculs.
 
 ## 🚀 Fonctionnalités
-- **Conversion Optimisée** : Algorithme de transformation Matrice Dense $\rightarrow$ Format CSR.
+- **Conversion Optimisée** : Algorithme de transformation Matrice Dense → Format CSR.
 - **Stockage Compact** : Utilisation de trois tableaux unidimensionnels (`values`, `col_indices`, `row_ptr`).
 - **Parallélisation** : Implémentation avec le module `multiprocessing` pour accélérer la construction sur de grands jeux de données.
 - **Analyse de Performance** : Scripts de benchmark pour comparer les approches séquentielles et parallèles.
 
-## 📊 Résultats Expérimentaux (Extraits du Rapport)
+## 📊 Résultats Expérimentaux (Rapport de Stage)
+
+Les tableaux ci-dessous présentent les résultats obtenus **lors du stage**, sur les machines du laboratoire LAMPS. Ils illustrent le gain de performance théorique sur de grands volumes de données.
 
 ### 1. Gain Mémoire (Dense vs CSR)
-Le format CSR offre une réduction spectaculaire de l'espace mémoire nécessaire, idéale pour les matrices très creuses (densité < 1%).
-
 | Taille Matrice | Mémoire Dense (éléments) | Mémoire CSR (éléments) | Réduction Mémoire |
 | :--- | :--- | :--- | :--- |
 | **1000 x 1000** | 1 000 000 | 10 007 | **~99.0%** |
@@ -26,37 +27,37 @@ Le format CSR offre une réduction spectaculaire de l'espace mémoire nécessair
 | **5000 x 5000** | 25 000 000 | 50 013 | **~99.8%** |
 
 ### 2. Performance Temporelle (Séquentiel vs Parallèle)
-L'implémentation parallèle permet de diviser par deux le temps de traitement sur les grandes instances.
-
 | Taille Matrice | Temps Séquentiel (s) | Temps Parallèle (s) | Speedup (Gain) |
 | :--- | :--- | :--- | :--- |
 | **1000 x 1000** | 2.34 s | 1.17 s | **x 2.0** |
 | **2000 x 2000** | 9.78 s | 4.89 s | **x 2.0** |
 | **5000 x 5000** | 42.56 s | 21.78 s | **x 1.95** |
 
-> **⚠️ Note technique** : Les résultats d'exécution peuvent varier selon la machine utilisée.
-> Le fichier [`results/log_execution.txt`](./results/log_execution.txt) contient un exemple d'exécution récent sur une machine personnelle moderne (où les temps sont plus courts, rendant le gain de parallélisation moins visible sur de petites matrices).
+> **⚠️ Note technique** : Les résultats d'exécution peuvent varier selon la machine utilisée. Le fichier [`results/log_execution.txt`](./results/log_execution.txt) contient un exemple d'exécution récent sur une machine personnelle moderne (où les temps sont plus courts, rendant le gain de parallélisation moins visible sur de petites matrices).
 
 ## 📁 Structure du Projet
 
-```bash
+```text
 stage_lamps/
-├── src/
+├── src/                    # Code source Python
 │   ├── csr_matrix.py       # Classe CSR principale
 │   ├── csr_parallel.py     # Version parallélisée
 │   ├── benchmark.py        # Scripts de tests
 │   └── plot_results.py     # Génération de graphiques
-├── results/
-│   ├── log_execution.txt   # Logs de performance
+├── docs/                   # Documentation
+│   └── Rapport-_stage_M1.pdf
+├── results/                # Résultats expérimentaux
+│   ├── log_execution.txt
 │   └── performance_graph.png
-└── README.md
-
+└── README.md               # Ce fichier
+```
 
 ## 🛠️ Technologies
 - **Langage** : Python 3.x
 - **Bibliothèques** : `NumPy`, `SciPy`, `Multiprocessing`
 
-
 ## 👥 Auteur
 **Salma Bensmail** (Étudiante M1 CHPS)
 *Encadré par M. Serge Dumont*
+```
+
