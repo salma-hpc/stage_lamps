@@ -51,6 +51,7 @@ stage_lamps/
 │   └── performance_graph.png
 └── README.md
 
+
 ## 🛠️ Technologies
 - **Langage** : Python 3.x
 - **Bibliothèques** : `NumPy`, `SciPy`, `Multiprocessing`
