@@ -49,9 +49,6 @@ stage_lamps/
 - **Langage** : Python 3.x
 - **Bibliothèques** : `NumPy`, `SciPy`, `Multiprocessing`
 
-## 📄 Rapport Complet
-Pour une analyse détaillée des algorithmes, de la théorie des matrices creuses et des résultats :
-👉 [Consulter le rapport de stage (PDF)](./docs/Rapport-_stage_M1.pdf)
 
 ## 👥 Auteur
 **Salma Bensmail** (Étudiante M1 CHPS)
