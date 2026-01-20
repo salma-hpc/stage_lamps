@@ -34,7 +34,8 @@ L'implémentation parallèle permet de diviser par deux le temps de traitement s
 | **2000 x 2000** | 9.78 s | 4.89 s | **x 2.0** |
 | **5000 x 5000** | 42.56 s | 21.78 s | **x 1.95** |
 
-*(Note : Les résultats ci-dessus sont ceux obtenus lors du stage sur les machines du laboratoire. Un script de benchmark est fourni pour tester sur votre propre machine.)*
+> **⚠️ Note technique** : Les résultats d'exécution peuvent varier selon la machine utilisée.
+> Le fichier [`results/log_execution.txt`](./results/log_execution.txt) contient un exemple d'exécution récent sur une machine personnelle moderne (où les temps sont plus courts, rendant le gain de parallélisation moins visible sur de petites matrices).
 
 ## 📁 Structure du Projet
 stage_lamps/
