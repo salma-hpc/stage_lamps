@@ -44,8 +44,6 @@ stage_lamps/
 │   ├── csr_parallel.py     # Version parallélisée
 │   ├── benchmark.py        # Scripts de tests
 │   └── plot_results.py     # Génération de graphiques
-├── docs/                   # Documentation
-│   └── Rapport-_stage_M1.pdf
 ├── results/                # Résultats expérimentaux
 │   ├── log_execution.txt
 │   └── performance_graph.png
