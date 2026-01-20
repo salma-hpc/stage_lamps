@@ -39,11 +39,16 @@ L'implémentation parallèle permet de diviser par deux le temps de traitement s
 
 ## 📁 Structure du Projet
 stage_lamps/
-├── src/ # Code source Python (CSR, Parallèle, Benchmark)
-├── docs/ # Rapport de stage complet (PDF)
-├── results/ # Logs d'exécution et graphiques de performance
-└── README.md # Documentation du projet
-
+├── src/ # Code source Python
+│ ├── csr_matrix.py # Classe CSR principale
+│ ├── csr_parallel.py # Version parallélisée
+│ ├── benchmark.py # Scripts de tests
+│ └── plot_results.py # Génération de graphiques
+├── results/ # Résultats expérimentaux
+│ ├── log_execution.txt
+│ └── performance_graph.png
+└── README.md # Ce fichier
+undefined
 
 ## 🛠️ Technologies
 - **Langage** : Python 3.x
