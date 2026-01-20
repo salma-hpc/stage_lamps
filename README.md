@@ -38,17 +38,18 @@ L'implémentation parallèle permet de diviser par deux le temps de traitement s
 > Le fichier [`results/log_execution.txt`](./results/log_execution.txt) contient un exemple d'exécution récent sur une machine personnelle moderne (où les temps sont plus courts, rendant le gain de parallélisation moins visible sur de petites matrices).
 
 ## 📁 Structure du Projet
+
+```bash
 stage_lamps/
-├── src/ # Code source Python
-│ ├── csr_matrix.py # Classe CSR principale
-│ ├── csr_parallel.py # Version parallélisée
-│ ├── benchmark.py # Scripts de tests
-│ └── plot_results.py # Génération de graphiques
-├── results/ # Résultats expérimentaux
-│ ├── log_execution.txt
-│ └── performance_graph.png
-└── README.md # Ce fichier
-undefined
+├── src/
+│   ├── csr_matrix.py       # Classe CSR principale
+│   ├── csr_parallel.py     # Version parallélisée
+│   ├── benchmark.py        # Scripts de tests
+│   └── plot_results.py     # Génération de graphiques
+├── results/
+│   ├── log_execution.txt   # Logs de performance
+│   └── performance_graph.png
+└── README.md
 
 ## 🛠️ Technologies
 - **Langage** : Python 3.x
